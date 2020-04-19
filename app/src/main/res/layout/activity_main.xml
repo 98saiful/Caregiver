@@ -17,7 +17,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_collapseMode="pin">
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="scroll|enterAlways">
 
             <TextView
                 android:id="@+id/toolbar_title"

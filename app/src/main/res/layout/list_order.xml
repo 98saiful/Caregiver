@@ -9,7 +9,8 @@
     app:cardUseCompatPadding="true"
     app:cardElevation="0dp"
     app:strokeWidth="1dp"
-    app:strokeColor="@color/stroke_color">
+    app:strokeColor="@color/stroke_color"
+    app:cardCornerRadius="8dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -32,7 +33,8 @@
                     android:layout_height="wrap_content"
                     android:text="Elderly Name"
                     android:textAppearance="?attr/textAppearanceHeadline6"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:textColor="@color/secondaryDarkColor"/>
 
                 <TextView
                     android:id="@+id/tvElderlyAge"
@@ -40,7 +42,6 @@
                     android:layout_height="wrap_content"
                     android:text="22"
                     android:layout_weight="1"
-                    android:textAppearance="?attr/textAppearanceHeadline6"
                     android:textColor="@color/grey_primary"
                     android:gravity="end"/>
 
@@ -52,6 +53,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Location"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Test"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Test"
                 android:textAppearance="?attr/textAppearanceBody2"
                 android:textColor="?android:attr/textColorSecondary" />
 
