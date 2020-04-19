@@ -5,12 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    android:clickable="true">
+    android:clickable="true"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="0dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/stroke_color">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -56,6 +59,6 @@
 
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </com.google.android.material.card.MaterialCardView>
