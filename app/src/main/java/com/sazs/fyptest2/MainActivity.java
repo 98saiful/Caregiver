@@ -82,10 +82,10 @@ public class MainActivity extends AppCompatActivity {
 //                Intent intent = new Intent(this, ProfileActivity.class);
 //                startActivity(intent);
 //                return true;
-//            case R.id.action_order:
-//                Intent intent2 = new Intent(this, OrderStatusActivity.class);
-//                startActivity(intent2);
-//                return true;
+            case R.id.action_order:
+                Intent intent2 = new Intent(this, OrderDetail.class);
+                startActivity(intent2);
+                return true;
             case R.id.logout:
                 sessionManager.logout();
         }
