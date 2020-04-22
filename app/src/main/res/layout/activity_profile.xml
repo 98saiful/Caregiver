@@ -53,6 +53,6 @@
         android:src="@drawable/ic_edit"
         app:layout_anchor="@id/app_bar"
         app:layout_anchorGravity="bottom|end"
-        app:backgroundTint="@color/secondaryLightColor" />
+        app:backgroundTint="@color/secondaryDarkColor" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
