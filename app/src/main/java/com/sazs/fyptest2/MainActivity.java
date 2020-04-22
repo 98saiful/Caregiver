@@ -78,10 +78,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         switch (item.getItemId()){
-//            case R.id.action_profile:
-//                Intent intent = new Intent(this, ProfileActivity.class);
-//                startActivity(intent);
-//                return true;
+            case R.id.action_profile:
+                Intent intent = new Intent(this, Profile.class);
+                startActivity(intent);
+                return true;
 //            case R.id.action_order:
 //                Intent intent2 = new Intent(this, OrderDetail.class);
 //                startActivity(intent2);
