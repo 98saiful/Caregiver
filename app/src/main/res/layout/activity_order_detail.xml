@@ -50,57 +50,69 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="12dp">
+                android:padding="24dp">
 
                 <TextView
                     android:id="@+id/name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Test"/>
+                    android:text="Test"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primaryColor" />
+
+                <include layout="@layout/item_divider"/>
 
                 <TextView
                     android:id="@+id/age"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Test"/>
+                    android:text="Test"
+                    android:paddingTop="@dimen/dimen_common_small"/>
 
                 <TextView
                     android:id="@+id/gender"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Test"/>
+                    android:text="Test"
+                    android:paddingTop="@dimen/dimen_common_small"/>
 
                 <TextView
                     android:id="@+id/height"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Test"/>
+                    android:text="Test"
+                    android:paddingTop="@dimen/dimen_common_small"/>
 
                 <TextView
                     android:id="@+id/weight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Test"/>
+                    android:text="Test"
+                    android:paddingTop="@dimen/dimen_common_small"/>
 
                 <TextView
                     android:id="@+id/location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Test"/>
+                    android:text="Test"
+                    android:paddingTop="@dimen/dimen_common_small"/>
 
                 <TextView
                     android:id="@+id/info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Test"/>
+                    android:text="Test"
+                    android:paddingTop="@dimen/dimen_common_small"/>
 
                 <TextView
                     android:id="@+id/note"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Test"/>
+                    android:text="Test"
+                    android:paddingTop="@dimen/dimen_common_small"/>
 
             </LinearLayout>
 
