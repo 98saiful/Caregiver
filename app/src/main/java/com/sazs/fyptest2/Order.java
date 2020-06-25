@@ -4,6 +4,7 @@ public class Order {
     private int order_id;
     private String elderly_name;
     private int elderly_age;
+    private String elderly_phone;
     private String elderly_gender;
     private int elderly_height;
     private int elderly_weight;
@@ -12,10 +13,11 @@ public class Order {
     private String elderly_note;
     private String user_name;
 
-    public Order(int order_id, String elderly_name, int elderly_age, String elderly_gender, int elderly_height, int elderly_weight, String elderly_location, String elderly_info, String elderly_note, String user_name) {
+    public Order(int order_id, String elderly_name, int elderly_age, String elderly_phone, String elderly_gender, int elderly_height, int elderly_weight, String elderly_location, String elderly_info, String elderly_note, String user_name) {
         this.order_id = order_id;
         this.elderly_name = elderly_name;
         this.elderly_age = elderly_age;
+        this.elderly_phone = elderly_phone;
         this.elderly_gender = elderly_gender;
         this.elderly_height = elderly_height;
         this.elderly_weight = elderly_weight;
@@ -37,6 +39,11 @@ public class Order {
 
     public int getElderly_age() {
         return elderly_age;
+    }
+
+
+    public String getElderly_phone() {
+        return elderly_phone;
     }
 
 

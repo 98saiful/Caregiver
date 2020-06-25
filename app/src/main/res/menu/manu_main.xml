@@ -17,12 +17,6 @@
         app:showAsAction="never"/>
 
     <item
-        android:id="@+id/action_order"
-        android:orderInCategory="101"
-        android:title="Order Status"
-        app:showAsAction="never"/>
-
-    <item
         android:id="@+id/logout"
         android:orderInCategory="102"
         android:title="Logout"

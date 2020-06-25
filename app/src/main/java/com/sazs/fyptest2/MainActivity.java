@@ -109,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
                                         order.getInt("order_id"),
                                         order.getString("elderly_name"),
                                         order.getInt("elderly_age"),
+                                        order.getString("elderly_phone"),
                                         order.getString("elderly_gender"),
                                         order.getInt("elderly_height"),
                                         order.getInt("elderly_weight"),

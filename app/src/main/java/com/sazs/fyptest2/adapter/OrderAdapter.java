@@ -49,6 +49,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
 
                 intent.putExtra("name", order.getElderly_name());
                 intent.putExtra("age", order.getElderly_age());
+                intent.putExtra("phone", order.getElderly_phone());
                 intent.putExtra("gender", order.getElderly_gender());
                 intent.putExtra("height", order.getElderly_height());
                 intent.putExtra("weight", order.getElderly_weight());

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,6 +17,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.sazs.fyptest2.session.SessionManager;
@@ -36,6 +38,8 @@ public class OrderDetail extends AppCompatActivity {
     TextView cgID, cgName;
     SessionManager sessionManager;
     RequestQueue requestQueue;
+    MaterialButton call,ws;
+    String number, link;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +51,9 @@ public class OrderDetail extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         cgID = findViewById(R.id.cg_id);
         cgName = findViewById(R.id.cg_name);
+        call = findViewById(R.id.call);
+        ws = findViewById(R.id.ws);
+
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -56,21 +63,22 @@ public class OrderDetail extends AppCompatActivity {
         HashMap<String, String> user = sessionManager.getUserDetail();
         getId = user.get(SessionManager.ID);
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                confirmOrder();
-            }
-        });
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                confirmOrder();
+//            }
+//        });
 
         getInfo();
         getCaregiverDetail();
     }
 
     private void getInfo(){
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         String name = intent.getExtras().getString("name");
         Integer age = intent.getExtras().getInt("age");
+        final String phone = intent.getExtras().getString("phone");
         String gender = intent.getExtras().getString("gender");
         Integer height = intent.getExtras().getInt("height");
         Integer weight = intent.getExtras().getInt("weight");
@@ -80,6 +88,7 @@ public class OrderDetail extends AppCompatActivity {
 
         TextView tvName = findViewById(R.id.name);
         TextView tvAge = findViewById(R.id.age);
+//        TextView tvPhone = findViewById(R.id.phone);
         TextView tvGender = findViewById(R.id.gender);
         TextView tvHeight = findViewById(R.id.height);
         TextView tvWeight = findViewById(R.id.weight);
@@ -89,12 +98,33 @@ public class OrderDetail extends AppCompatActivity {
 
         tvName.setText(name);
         tvAge.setText((String.valueOf(age)));
+//        tvPhone.setText((String.valueOf(phone)));
         tvGender.setText(gender);
         tvHeight.setText((String.valueOf(height)));
         tvWeight.setText((String.valueOf(weight)));
         tvLocation.setText(location);
         tvInfo.setText((info));
         tvNote.setText(note);
+
+        call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                number=phone;
+                Intent intent2 = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", number, null));
+                startActivity(intent2);
+            }
+        });
+
+        ws.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                link="https://wa.me/6"+phone;
+                Intent intent3= new Intent(Intent.ACTION_VIEW);
+                intent3.setData(Uri.parse(link));
+                startActivity(intent3);
+            }
+        });
+
     }
 
     private void getCaregiverDetail(){

@@ -44,8 +44,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_margin="40dp"
-            app:cardCornerRadius="16dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginVertical="5dp"
+            app:cardCornerRadius="12dp"
             android:backgroundTint="#ebecf0"
             app:cardElevation="5dp">
 
@@ -53,7 +55,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="24dp">
+                android:paddingTop="24dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:paddingBottom="24dp">
 
                 <TextView
                     android:id="@+id/name"
@@ -115,15 +120,71 @@
                     android:text="Test"
                     android:paddingTop="@dimen/dimen_common_small"/>
 
+<!--                <TextView-->
+<!--                    android:id="@+id/phone"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Test"-->
+<!--                    android:paddingTop="@dimen/dimen_common_small"/>-->
+
+
+
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
 
         <LinearLayout
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/call"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Call"
+                    android:layout_marginRight="5dp"
+                    android:height="55dp"
+                    app:cornerRadius="12dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/ws"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Whatsapp"
+                    android:backgroundTint="#075e54"
+                    android:layout_marginLeft="5dp"
+                    android:height="55dp"
+                    app:cornerRadius="12dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="invisible"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginLeft="40dp">
+            android:layout_marginLeft="40dp"
+            android:paddingTop="@dimen/dimen_common">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -139,6 +200,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:visibility="invisible"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -159,17 +221,18 @@
 
     </LinearLayout>
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        app:elevation="2dp"
-        android:backgroundTint="@color/primaryColor"
-        app:iconTint="@color/white"
-        android:textColor="@color/white"
-        android:text="Accept"
-        app:icon="@drawable/ic_check" />
+<!--    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton-->
+<!--        android:id="@+id/fab"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:backgroundTint="@color/primaryColor"-->
+<!--        android:text="Accept"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:elevation="2dp"-->
+<!--        app:icon="@drawable/ic_check"-->
+<!--        app:iconTint="@color/white" />-->
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
